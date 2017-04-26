@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<title>Text Summarization</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+
+
+<body>
+
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">TEXT SUMMARIZATION</a>
+    
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small"></a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">TECHNIQUES<i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="http://127.0.0.1:5000/lex" class="w3-bar-item w3-button">LEX RANK SUMMARIZER</a>
+        <a href="http://127.0.0.1:5000/lsa" class="w3-bar-item w3-button">LSA SUMMARIZER</a>
+        <a href="http://127.0.0.1:5000/" class="w3-bar-item w3-button">K MEANS APPROACH</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right">CREATED BY</a>
+  </div>
+</div>
+
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+  <img class="w3-image" src="/static/libro.jpg" alt="London" width="1500" height="800">
+  <div class="w3-display-middle" style="width:65%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink" ><p>Summary of your text</p></button>
+     
+    </div>
+
+
+<!-- result -->
+
+<div id="Flight" class="w3-container w3-light w3-padding-16 myLink">
+<form  name="analyse" >
+      <h3>Refer the output file in directory for future use</h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+  
+<textarea id="text" maxlength="50000" name="text" size="5000" style="width:600px;height:250px">
+{% for page in summary %}
+  {{ page }}
+  {% endfor %}
+</textarea>
+
+        </div>
+      </div>
+</form>
+
+</body>
+</html>
